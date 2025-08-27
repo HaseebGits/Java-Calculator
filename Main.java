@@ -3,11 +3,11 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        Main mainApp = new Main();
-        mainApp.runCalculator();
+
+        runCalculator();
     }
 
-    public void runCalculator() {
+    public static void runCalculator() {
         Scanner scanner = new Scanner(System.in);
         Calculator calculator = new Calculator();
         try {
@@ -25,12 +25,13 @@ public class Main {
 
         } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
-        } finally {
+        }
+        finally {
             scanner.close();
         }
     }
 
-    public double performOperation(Calculator calculator, double a, double b, String operation) {
+    public static double performOperation(Calculator calculator, double a, double b, String operation) {
         switch (operation) {
             case "+":
                 return calculator.addition(a, b);

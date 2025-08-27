@@ -9,8 +9,8 @@ public class MockitoTest {
     public void testOperationWithMoke(){
         Calculator mockedCalculator = Mockito.mock(Calculator.class);
         Main mainApp = new Main();
-        Mockito.when(mockedCalculator.addition(0.0,0.0)).thenReturn(0.0);
-        double result=mainApp.performOperation(mockedCalculator,0.0,0.0,"+");
-        assertEquals(0.0,result);
+        Mockito.when(mockedCalculator.addition(2.0,2.0)).thenReturn(5.0);
+        double result=mainApp.performOperation(mockedCalculator,2.0,2.0,"+");
+        assertEquals(5.0,result);
     }
 }
